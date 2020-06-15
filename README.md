@@ -1,1 +1,1 @@
-Webpack + SASS + BABEL + THREE JS
+Webpack + SASS + BABEL 
