@@ -14,16 +14,8 @@
     "author": "",
     "license": "MIT",
     "dependencies": {
-        "ammo": "^3.0.3",
-        "cannon": "^0.6.2",
         "favicons-webpack-plugin": "^3.0.1",
-        "refractor": "^3.0.0",
-        "three": "^0.116.1",
-        "three-asciieffect": "^1.0.1",
-        "three-orbit-controls": "^82.1.0",
-        "three-pointer-lock-controls": "^1.0.0",
-        "three-trackballcontrols": "0.0.8",
-        "three.js": "^0.77.1"
+        "refractor": "^3.0.0"
     },
     "devDependencies": {
         "@babel/core": "^7.2.2",
