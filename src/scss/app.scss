@@ -1,22 +1,62 @@
 body {
   font-family: input-mono-compressed,monospace;
   font-weight: 400;
-font-style: normal;
+  font-style: normal;
+  background-color: #b5b8bb;
+  height: 100vh;
+  margin: 0px;
 }
 
 
-$grid-width = 100vw;
-$grid-margins = 4rem;
-$grid-gutters = 12px;
-$total-columns = 12;
-
-column
-
-
-
-$single-column = calc(($grid-width - ($grid-margins * 2)) - (($total-columns - 1) * $grid-gutters) / $total-columns)
+$grid-width: 100vw;
+$grid-margins:  4rem;
+$grid-gutters: 12rem;
+$total-columns: 12;
 
 
 
 
-($single-column * $column-span) + ($grid-gutters * ($column-span -1))
+$single-column: calc(($grid-width - ($grid-margins * 2)) - (($total-columns - 1) * $grid-gutters) / $total-columns);
+
+
+.text-box {
+  $column-span: 1;
+  width: calc(($single-column * $column-span) + ($grid-gutters * ($column-span -1)));
+
+}
+
+.fade-in {
+  opacity: 1 !important;
+  transform: translate(0,-10px);
+  transition: all 3s ease !important;
+}
+
+.fade-out {
+  opacity: 0 !important;
+  transition: all 3s ease !important;
+}
+
+.land {
+  position: absolute;
+  top: 0px;
+  opacity: 0;
+  margin: 20px;
+}
+
+.opener {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+#flash {
+  font-size: 18vw;
+  transform: scale(.8, 3.5);
+  color: #C6FF00;
+  text-align: center;
+  opacity: 1;
+  cursor: default;
+}
