@@ -37,5 +37,5 @@ window.setTimeout(stopColor, 2000);
 function stopColor() {
   clearInterval(myVar);
   land.classList.add('fade-in');
-  window.setTimeout( yo, 1000);
+  window.setTimeout( yo, 2000);
 }
