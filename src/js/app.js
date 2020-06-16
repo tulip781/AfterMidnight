@@ -1,6 +1,7 @@
+import '../scss/app.scss';
+
 const flasher = document.getElementById("flash");
 const land = document.querySelector('.land');
-
 
 const words = ["biased",
 "tooke",
@@ -21,7 +22,6 @@ const words = ["biased",
 "nonreformational",
 "undepicted",
 "habitational"]
-
 
 var myVar = setInterval(setColor, 100);
 

@@ -1,3 +1,5 @@
+@import './break.scss';
+
 body {
   font-family: input-mono-compressed,monospace;
   font-weight: 400;
@@ -5,14 +7,6 @@ body {
   background-color: #b5b8bb;
   height: 100vh;
   margin: 0px;
-}
-
-
-
-.text-box {
-  // $column-span: 1;
-  // width: calc(($single-column * $column-span) + ($grid-gutters * ($column-span -1)));
-
 }
 
 .fade-in {
@@ -30,7 +24,6 @@ body {
   position: absolute;
   top: 0px;
   opacity: 0;
-  margin: 20px;
 }
 
 .opener {
@@ -44,7 +37,7 @@ body {
 
 #flash {
   font-size: 18vw;
-  transform: scale(.8, 3.5);
+  transform: scale(.8, 3.8);
   color: #C6FF00;
   text-align: center;
   opacity: 1;

@@ -1,0 +1,32 @@
+$gridwidth: 100vw;
+$gridmargins: 66px;
+$gridgutters: 12px;
+$totalcolumns: 12;
+$singlecolumn: calc(( ( #{$gridwidth} - ( #{$gridmargins} * 2) ) - (( #{$totalcolumns} -1) * #{$gridgutters} ) ) / #{$totalcolumns} );
+
+
+.text-box {
+  $columnspan: 2;
+  width: calc(( #{$singlecolumn} * #{$columnspan} ) + ( #{$gridgutters} * ( #{$columnspan} -1) ));
+  position: absolute;
+  left: calc( #{$gridmargins} + #{$gridgutters} );
+  top: calc( #{$gridmargins} + ( 2 * #{$gridgutters}) + #{$singlecolumn} );
+}
+
+
+.title {
+  margin: 0;
+  line-height: 48px;
+  position: absolute;
+  left: calc( #{$gridmargins} + #{$gridgutters} );
+  top: calc( #{$gridmargins} + #{$gridgutters});
+  white-space: nowrap;
+}
+
+.imageone {
+  $columnspan: 3;
+  width: calc(( #{$singlecolumn} * #{$columnspan} ) + ( #{$gridgutters} * ( #{$columnspan} -1) ));
+  position: absolute;
+  left: calc( #{$gridmargins} + ( 4 * #{$gridgutters} ) + ( 3 * #{$singlecolumn} ) );
+  top: calc( #{$gridmargins} + #{$gridgutters});
+}
