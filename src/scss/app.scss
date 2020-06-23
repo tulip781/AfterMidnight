@@ -12,12 +12,12 @@ body {
 .fade-in {
   opacity: 1 !important;
   transform: translate(0,-10px);
-  transition: all 3s ease !important;
+  transition: opacity 3s ease !important;
 }
 
 .fade-out {
   opacity: 0 !important;
-  transition: all 3s ease !important;
+  transition: opacity 3s ease !important;
 }
 
 .land {
