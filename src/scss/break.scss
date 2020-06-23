@@ -20,6 +20,7 @@ $singlecolumn: calc(( ( #{$gridwidth} - ( #{$gridmargins} * 2) ) - (( #{$totalco
   display: flex;
   padding: 0 4px;
   width: 60vw;
+  margin: auto;
 
 }
 
@@ -29,4 +30,19 @@ $singlecolumn: calc(( ( #{$gridwidth} - ( #{$gridmargins} * 2) ) - (( #{$totalco
 
 img {
   width: 100%;
+}
+
+.margins {
+
+}
+
+.slide-in {
+  transform: translateX(-30px);
+  opacity: 0;
+}
+
+.slide-in.img1.active {
+  transform: translateX(0px);
+  transition: all 0.5s ease;
+  opacity: 1;
 }
