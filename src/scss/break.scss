@@ -16,70 +16,17 @@ $singlecolumn: calc(( ( #{$gridwidth} - ( #{$gridmargins} * 2) ) - (( #{$totalco
   text-align: justify;
 }
 
+.container {
+  display: flex;
+  padding: 0 4px;
+  width: 60vw;
 
-
-.imageone {
-  $columnspan: 3;
-  width: calc(( #{$singlecolumn} * #{$columnspan} ) + ( #{$gridgutters} * ( #{$columnspan} -1) ));
-  position: absolute;
-  left: calc( #{$gridmargins} + ( 4 * #{$gridgutters} ) + ( 3 * #{$singlecolumn} ) );
-  top: calc( #{$gridmargins} + #{$gridgutters});
-  transform-origin: top left;
-  z-index: -1;
 }
 
-.stretch:hover {
-  cursor: default;
-  transform: scale(1, 1.3);
+.column {
+  flex: 50%;
 }
 
-
-.imagetwo {
-  $columnspan: 4;
-  width: calc(( #{$singlecolumn} * #{$columnspan} ) + ( #{$gridgutters} * ( #{$columnspan} -1) ));
-  position: absolute;
-  left: calc( #{$gridmargins} + ( 7 * #{$gridgutters} ) + ( 6 * #{$singlecolumn} ) );
-  top: calc( #{$gridmargins} + #{$gridgutters});
-  transform-origin: top left;
-  z-index: -1;
-}
-
-.imagethree {
-  $columnspan: 1;
-  width: calc(( #{$singlecolumn} * #{$columnspan} ) + ( #{$gridgutters} * ( #{$columnspan} -1) ));
-  position: absolute;
-  left: calc( #{$gridmargins} + ( 12 * #{$gridgutters} ) + ( 11 * #{$singlecolumn} ) );
-  top: calc( #{$gridmargins} + #{$gridgutters});
-  transform-origin: top left;
-  z-index: -1;
-}
-
-.imagefour {
-  $columnspan: 3;
-  width: calc(( #{$singlecolumn} * #{$columnspan} ) + ( #{$gridgutters} * ( #{$columnspan} -1) ));
-  position: absolute;
-  left: calc( #{$gridmargins} + ( 3 * #{$gridgutters} ) + ( 4 * #{$singlecolumn} ) );
-  top: calc( #{$gridmargins} + ( 5 * #{$gridgutters} ) + ( 6 * #{$singlecolumn} ) );
-  transform-origin: top left;
-  z-index: -1;
-}
-
-.imagefive {
-  $columnspan: 3;
-  width: calc(( #{$singlecolumn} * #{$columnspan} ) + ( #{$gridgutters} * ( #{$columnspan} -1) ));
-  position: absolute;
-  left: calc( #{$gridmargins} + ( 1 * #{$gridgutters} ) + ( 2 * #{$singlecolumn} ) );
-  top: calc( #{$gridmargins} + ( 3 * #{$gridgutters} ) + ( 6 * #{$singlecolumn} ) );
-  transform-origin: top left;
-  z-index: -1;
-}
-
-.imagesix {
-  $columnspan: 2;
-  width: calc(( #{$singlecolumn} * #{$columnspan} ) + ( #{$gridgutters} * ( #{$columnspan} -1) ));
-  position: absolute;
-  left: calc( #{$gridmargins} + ( 1 * #{$gridgutters} ) + ( 4 * #{$singlecolumn} ) );
-  top: calc( #{$gridmargins} + ( 1 * #{$gridgutters} ) + ( 3 * #{$singlecolumn} ) );
-  transform-origin: top left;
-  z-index: -1;
+img {
+  width: 100%;
 }

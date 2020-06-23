@@ -21,9 +21,10 @@ body {
 }
 
 .land {
-  position: absolute;
   top: 0px;
   opacity: 0;
+  width: 70vw;
+
 }
 
 .opener {
@@ -33,6 +34,9 @@ body {
   align-items: center;
   text-align: center;
   overflow: hidden;
+  position: absolute;
+  z-index: 100;
+  width: 100vw;
 }
 
 #flash {
