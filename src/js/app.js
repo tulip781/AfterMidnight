@@ -40,7 +40,7 @@ function stopColor() {
   window.setTimeout( yo, 2000);
 }
 
-const images = document.querySelectorAll('img');
+const images = document.querySelectorAll('.imageone');
 
 
 
