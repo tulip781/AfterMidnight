@@ -19,22 +19,22 @@ $singlecolumn: calc(( ( #{$gridwidth} - ( #{$gridmargins} * 2) ) - (( #{$totalco
 .container {
   display: flex;
   padding: 0 4px;
-  width: 90vw;
+  width: 50vw;
   margin: auto;
 
 }
 
 .column {
   flex: 50%;
-  margin: 5px;
+  margin: 0px 5px;
 }
 
 img {
   width: 100%;
-  margin: 5px;
-  transform: translateX(-30px);
+  transform: translateY(-30px);
   opacity: 0;
   cursor: pointer;
+  margin: 5px 0px;
 }
 
 .margins {
@@ -48,6 +48,54 @@ img {
 
 img.active {
   transform: translateY(0px);
-  transition: all 0.5s ease;
+  transition: all 1s ease;
   opacity: 1;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  display: inline;
+  margin-right: 20px;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  margin: 0px calc(32vw / 2);
+  padding-left: 2px;
+}
+
+.textover {
+  position: relative;
+  text-align: center;
+  color: white;
+
+}
+
+.textover:hover {
+  position: relative;
+  text-align: center;
+  color: white;
+  .bottom-left {
+    opacity: 0;
+  }
+
+}
+
+/* Bottom left text */
+.bottom-left {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.bottom-left:hover {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
 }

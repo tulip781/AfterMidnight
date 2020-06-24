@@ -1,13 +1,21 @@
 @import './break.scss';
 
+@font-face {
+  font-family: "FavoritPro-Regular";
+  src: url("..assets/fonts/FavoritPro-Regular.otf") format("otf"),
+       url("..assets/fonts/FavoritPro-Regular.otf") format("otf");
+}
+
+
 body {
-  font-family: input-mono-compressed,monospace;
+  font-family: FavoritPro-Regular;
   font-weight: 400;
   font-style: normal;
-  background-color: #b5b8bb;
+  background-color: #F2F2F2;
   height: 100vh;
   margin: 0px;
 }
+
 
 .fade-in {
   opacity: 1 !important;
@@ -23,7 +31,8 @@ body {
 .land {
   top: 0px;
   opacity: 0;
-  width: 100vw;
+  transform: translate(0,30px);
+  width: 70vw;
   box-sizing: border-box;
 
 }
@@ -42,7 +51,7 @@ body {
 
 #flash {
   font-size: 18vw;
-  transform: scale(.8, 3.8);
+  transform: scale(.8, 4);
   color: #C6FF00;
   text-align: center;
   opacity: 1;

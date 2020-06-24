@@ -1,7 +1,7 @@
 import '../scss/app.scss';
 
 const flasher = document.getElementById("flash");
-const land = document.querySelector('.land');
+const land = document.querySelectorAll('.land');
 
 const words = ["biased",
 "tooke",
@@ -21,7 +21,19 @@ const words = ["biased",
 "skald",
 "nonreformational",
 "undepicted",
-"habitational"]
+"habitational",
+"with",
+"from",
+"near",
+'behind',
+'into',
+'towards',
+'since',
+'within',
+'via',
+'opposite',
+'inside',
+'as']
 
 var myVar = setInterval(setColor, 100);
 
@@ -36,7 +48,9 @@ window.setTimeout(stopColor, 2000);
 
 function stopColor() {
   clearInterval(myVar);
-  land.classList.add('fade-in');
+  land.forEach((lan) => {
+    lan.classList.add('fade-in');
+  });
   window.setTimeout( yo, 2000);
 }
 
@@ -58,7 +72,7 @@ const isScrolledIntoView = (el) => {
     let elemTop = rect.top;
     let elemBottom = rect.bottom;
     let isVisible = (elemTop >= 0) && (elemBottom <= window.innerHeight);
-    let visible = (window.innerHeight - elemTop) >= (rect.height / 8)
+    let visible = (window.innerHeight - elemTop) >= (rect.height / 6)
     return visible;
 }
 
