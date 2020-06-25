@@ -99,4 +99,5 @@ const checkSlide = (e) => {
   })
 }
 
+debounce(checkSlide);
 window.addEventListener('scroll', debounce(checkSlide));
