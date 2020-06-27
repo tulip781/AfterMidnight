@@ -56,7 +56,6 @@ function stopColor() {
 }
 
 const images = document.querySelectorAll('.imageone');
-console.log(images);
 
 
 const moveIn = (e) => {
@@ -69,7 +68,6 @@ const moveOut = (e) => {
 
 const isScrolledIntoView = (el) => {
     let rect = el.getBoundingClientRect();
-    console.log(rect);
     let elemTop = rect.top;
     let elemBottom = rect.bottom;
     let isVisible = (elemTop >= 0) && (elemBottom <= window.innerHeight);
@@ -77,7 +75,7 @@ const isScrolledIntoView = (el) => {
     return visible;
 }
 
-const debounce = (func, wait = 50) => {
+const debounce = (func, wait = 20) => {
   let timeout;
   return function(...args) {
     clearTimeout(timeout);
@@ -88,7 +86,6 @@ const debounce = (func, wait = 50) => {
 }
 
 const checkSlide = (e) => {
-  console.log('check called');
   images.forEach((image) => {
     let test = image.getBoundingClientRect()
     let top = test.top;
