@@ -3,6 +3,7 @@ import '../scss/app.scss';
 const flasher = document.getElementById("flash");
 const land = document.querySelectorAll('.land');
 
+
 const words = ["biased",
 "tooke",
 "viol",
@@ -55,7 +56,7 @@ function stopColor() {
 }
 
 const images = document.querySelectorAll('.imageone');
-
+console.log(images);
 
 
 const moveIn = (e) => {
@@ -87,6 +88,7 @@ const debounce = (func, wait = 50) => {
 }
 
 const checkSlide = (e) => {
+  console.log('check called');
   images.forEach((image) => {
     let test = image.getBoundingClientRect()
     let top = test.top;
