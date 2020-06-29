@@ -3,7 +3,6 @@ import '../scss/app.scss';
 const flasher = document.getElementById("flash");
 const land = document.querySelectorAll('.land');
 
-
 const words = ["biased",
 "tooke",
 "viol",
@@ -41,10 +40,16 @@ var myVar = setInterval(setColor, 100);
 function setColor() {
   flasher.innerHTML = words[Math.floor(Math.random() * words.length)]
 }
+function kill() {
+  flasher.style.display = 'none';
+}
 
 function yo() {
   flasher.classList.add('fade-out');
+  window.setTimeout( kill, 2000);
 }
+
+
 window.setTimeout(stopColor, 2000);
 
 function stopColor() {
@@ -56,7 +61,12 @@ function stopColor() {
 }
 
 const images = document.querySelectorAll('.imageone');
+const textbox = document.querySelector('.textover');
 
+
+const makegreen = () => {
+
+}
 
 const moveIn = (e) => {
   e.classList.add('active');
@@ -86,6 +96,7 @@ const debounce = (func, wait = 20) => {
 }
 
 const checkSlide = (e) => {
+  console.log('called on landing');
   images.forEach((image) => {
     let test = image.getBoundingClientRect()
     let top = test.top;
@@ -98,5 +109,6 @@ const checkSlide = (e) => {
   })
 }
 
-checkSlide();
+
 window.addEventListener('scroll', debounce(checkSlide));
+checkSlide();
