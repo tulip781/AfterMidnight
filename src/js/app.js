@@ -2,6 +2,10 @@ import '../scss/app.scss';
 
 const flasher = document.getElementById("flash");
 const land = document.querySelectorAll('.land');
+const opener = document.querySelector(".opener");
+const hovertexts = document.querySelectorAll('.bottom-left');
+
+
 
 const words = ["biased",
 "tooke",
@@ -41,12 +45,14 @@ function setColor() {
   flasher.innerHTML = words[Math.floor(Math.random() * words.length)]
 }
 function kill() {
-  flasher.style.display = 'none';
+  opener.style.display = 'none';
+  opener.style.zindex = '-1000';
+  console.log(opener.style.zindex);
 }
 
 function yo() {
   flasher.classList.add('fade-out');
-  window.setTimeout( kill, 2000);
+  window.setTimeout( kill, 2100);
 }
 
 
@@ -61,19 +67,20 @@ function stopColor() {
 }
 
 const images = document.querySelectorAll('.imageone');
-const textbox = document.querySelector('.textover');
+const textbox = document.querySelectorAll('.textover');
 
 
-const makegreen = () => {
-
-}
 
 const moveIn = (e) => {
   e.classList.add('active');
+  window.setTimeout( () => {
+    e.parentElement.style.backgroundColor = '#C6FF00';
+  }, 3000);
 }
 
 const moveOut = (e) => {
   e.classList.remove('active');
+  e.parentElement.style.backgroundColor = 'white';
 }
 
 const isScrolledIntoView = (el) => {
@@ -96,7 +103,6 @@ const debounce = (func, wait = 20) => {
 }
 
 const checkSlide = (e) => {
-  console.log('called on landing');
   images.forEach((image) => {
     let test = image.getBoundingClientRect()
     let top = test.top;
@@ -112,3 +118,6 @@ const checkSlide = (e) => {
 
 window.addEventListener('scroll', debounce(checkSlide));
 checkSlide();
+hovertexts.forEach((text) => {
+  text.innerText = words.pop()
+})
