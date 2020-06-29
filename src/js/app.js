@@ -115,6 +115,11 @@ const checkSlide = (e) => {
   })
 }
 
+var ticker = document.querySelector('.ticker');
+var list = document.querySelector('.ticker__list');
+var clone = list.cloneNode(true);
+
+ticker.append(clone)
 
 window.addEventListener('scroll', debounce(checkSlide));
 checkSlide();

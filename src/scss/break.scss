@@ -117,3 +117,45 @@ li {
   transition: mix-blend-mode 1s ease;
 }
 
+footer {
+  padding: 20px calc(32vw / 2);
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  background-image: linear-gradient(to bottom, rgba(242,242,242,0), rgba(198,255,0,1));
+  background-size: cover;
+  font-size: 50px;
+}
+
+.ticker {
+  display: flex;
+}
+.ticker__list {
+  display: flex;
+  margin-top: 20px;
+  animation: ticker 15s infinite linear;
+}
+
+.ticker__item {
+  margin-right: 20px;
+}
+@-moz-keyframes ticker {
+  100% {
+    transform: translateX(-100%);
+  }
+}
+@-webkit-keyframes ticker {
+  100% {
+    transform: translateX(-100%);
+  }
+}
+@-o-keyframes ticker {
+  100% {
+    transform: translateX(-100%);
+  }
+}
+@keyframes ticker {
+  100% {
+    transform: translateX(-100%);
+  }
+}
