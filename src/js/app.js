@@ -4,7 +4,7 @@ const flasher = document.getElementById("flash");
 const land = document.querySelectorAll('.land');
 const opener = document.querySelector(".opener");
 const hovertexts = document.querySelectorAll('.bottom-left');
-
+const bannertext = document.querySelector('.bannertext');
 
 
 const words = ["biased",
@@ -45,8 +45,8 @@ function setColor() {
   flasher.innerHTML = words[Math.floor(Math.random() * words.length)]
 }
 function kill() {
-  opener.style.display = 'none';
   opener.style.zindex = '-1000';
+  window.setTimeout( () => {bannertext.classList.add('now')}, 300);
   console.log(opener.style.zindex);
 }
 
