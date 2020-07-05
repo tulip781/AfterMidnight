@@ -6,6 +6,11 @@
        url("../assets/fonts/FavoritPro-Regular.otf") format("otf");
 }
 
+@font-face {
+  font-family: "FKRasterGroteskTrial-Smooth";
+  src: url("../assets/fonts/FKRasterGroteskTrial-Smooth.otf") format("otf")
+}
+
 
 body {
   font-family: FavoritPro-Regular;
@@ -58,4 +63,18 @@ body {
   text-align: center;
   opacity: 1;
   cursor: default;
+}
+
+.poem {
+  width: 100%;
+  text-align: center;
+  font-family: FKRasterGroteskTrial-Smooth;
+  position: fixed;
+  z-index: 100;
+  color: #C6FF00;
+  left:0;
+  top: 0;
+  font-size: 14vw;
+  cursor: default;
+
 }
