@@ -46,20 +46,35 @@ function setColor() {
 }
 function kill() {
   opener.style.zindex = '-1000';
-  window.setTimeout( () => {bannertext.classList.add('now')}, 300);
-  console.log(opener.style.zindex);
+  window.setTimeout( () => {
+    bannertext.classList.add('now');
+    poem2.classList.add('fade-in');
+
+
+  }, 300);
+
 }
+
+const poem2 = document.querySelector('.poem');
+
 
 function yo() {
   flasher.classList.add('fade-out');
+
   window.setTimeout( kill, 2100);
 }
 
-
+const body = document.querySelector('body');
+window.pageYOffset = "0"
+body.style.height = "100vw";
+body.style.overflow = "hidden";
 window.setTimeout(stopColor, 2000);
 
 function stopColor() {
+  body.style.height = "auto";
+  body.style.overflow = "visible";
   clearInterval(myVar);
+  [...land].splice(1, 1);
   land.forEach((lan) => {
     lan.classList.add('fade-in');
   });
@@ -138,10 +153,8 @@ request.onload = function () {
 
   if (request.status >= 200 && request.status < 400) {
     data.forEach((movie) => {
-      console.log(movie);
       movie.lines.forEach((line) => {
         lina.push(line);
-        console.log(lina);
       })
     })
   } else {
@@ -153,10 +166,10 @@ request.onload = function () {
 request.send()
 
 const poem_maker = () => {
-  console.log('poem maker called');
   setInterval(function(){
     const poem = document.querySelector('.poem');
     let quick = [];
+    quick.push(lina.pop());
     quick.push(lina.pop());
     quick.push(lina.pop());
     quick.push(lina.pop());

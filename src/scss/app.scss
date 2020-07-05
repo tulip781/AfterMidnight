@@ -71,11 +71,13 @@ body {
   text-align: center;
   font-family: FKRasterGroteskTrial-Smooth;
   position: fixed;
-  z-index: 100;
+  z-index: -100;
   color: #C6FF00;
   left:0;
-  top: 0;
-  font-size: 14vw;
+  top: -80;
+  opacity: 0;
+  font-size: 10vw;
   cursor: default;
+  text-align: justify;
 
 }
