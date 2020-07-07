@@ -1,11 +1,28 @@
 import '../scss/app.scss';
+import { fadeCssAnimation } from './module/fade.js';
+
+
+const about = document.querySelector('.about');
+const close = document.querySelector('.close');
+close.addEventListener("click", (e) => {
+  section.classList.toggle('active');
+})
+
+
+const section = document.querySelector('section');
+about.addEventListener("click", (e) => {
+  section.classList.toggle('active');
+})
+
+
+
 
 const flasher = document.getElementById("flash");
 const land = document.querySelectorAll('.land');
 const opener = document.querySelector(".opener");
 const hovertexts = document.querySelectorAll('.bottom-left');
 const bannertext = document.querySelector('.bannertext');
-
+fadeCssAnimation();
 
 const words = ["biased",
 "tooke",
@@ -39,8 +56,8 @@ const words = ["biased",
 'inside',
 'as']
 
-var myVar = setInterval(setColor, 100);
 
+var myVar = setInterval(setColor, 100);
 function setColor() {
   flasher.innerHTML = words[Math.floor(Math.random() * words.length)]
 }
@@ -48,8 +65,6 @@ function kill() {
   opener.style.zindex = '-1000';
   window.setTimeout( () => {
     bannertext.classList.add('now');
-    poem2.classList.add('fade-in');
-
 
   }, 300);
 
@@ -73,10 +88,12 @@ window.setTimeout(stopColor, 2000);
 function stopColor() {
   body.style.height = "auto";
   body.style.overflow = "visible";
+  body.style.overflowX = "hidden";
   clearInterval(myVar);
   [...land].splice(1, 1);
   land.forEach((lan) => {
     lan.classList.add('fade-in');
+
   });
   window.setTimeout( yo, 2000);
 }
@@ -173,6 +190,8 @@ const poem_maker = () => {
     quick.push(lina.pop());
     quick.push(lina.pop());
     quick.push(lina.pop());
+    quick.push(lina.pop());
+    quick.push(lina.pop());
     poem.innerText = quick;
-  }, 3000)
+  }, 1000)
 }

@@ -1,0 +1,42 @@
+.about {
+  cursor: pointer;
+}
+
+section {
+  display: none;
+  height: 100vh;
+  color: black;
+  width: 100vw;
+  position:fixed;
+  z-index: 4000;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-weight: lighter;
+  background-color: #F2F2F2;
+ h1 {
+  font-size: 17px;
+  font-weight: lighter;
+  margin: 40px;
+ }
+}
+
+.close {
+  position: absolute;
+  right: 0;
+  padding-right: 10px;
+  cursor: pointer;
+  top: 0;
+  color: black;
+  font-weight: lighter;
+  font-size: 17px;
+}
+
+.close:hover {
+  text-decoration: underline;
+
+}
+
+section.active {
+ display: flex;
+}

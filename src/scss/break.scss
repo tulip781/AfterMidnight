@@ -69,7 +69,8 @@ li {
   justify-content: space-between;
   margin: 0px calc(32vw / 2);
   padding-left: 2px;
-  cursor: pointer;
+  position: relative;
+  z-index: 1000;
 }
 
 .textover {
